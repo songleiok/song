@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+   <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+   <script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+<title>my_work</title>
+</head>
+<body>
+<div id="formbackground" style="position:absolute; z-index:-1;"><img src="img/start1.jpg" height="100%" width="180%"/></div>
+<script type="text/javascript">
+$(function(){
+    $('#formbackground').height($(window).height());
+    $('#formbackground').width($(window).width());
+});
+</script>
+<nav class="navbar navbar-inverse" role="navigation">
+   <div class="navbar-header">
+      <a href="index.html" class="navbar-brand">我的主页</a>
+   </div>
+   <div>
+      <ul class="nav navbar-nav">
+         <li ><a href="#" onClick="playlist(this)" id="work/4">我的2015</a></li>
+         <li ><a href="#" onClick="playlist(this)" id="work/5">我的课件</a></li>
+         <li ><a href="work/1.pdf">我的长文档</a></li>
+         <li ><a href="work/2.pdf">我的论文</a></li>
+         <li ><a href="work/3.files/tabstrip.htm" target="_blank">透视表</a></li>
+      </ul>
+   </div>
+</nav>
+
+<video id="myVideo"width=50% height=50% controls autoplay>
+  <source  src="work/4.mp4" type="video/mp4">
+    <source  src="work/5.mp4" type="video/mp4">
+</video> 
+
+<script type="text/javascript">
+function playlist(a){
+	var MV=document.getElementById("myVideo");
+	MV.src=a.id+'.mp4';
+	MV.play();
+	}
+</script>
+</body>
+
+</body>
+</html>
